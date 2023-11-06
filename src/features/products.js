@@ -12,6 +12,19 @@ export const products = createSlice({
       state.items = action.payload;
     },
   },
+
+  extraReducers: {
+    ["cart/createCartItem"]: (state, action) => {
+      state.items.newPlants.find(
+        (el) => el.id === action.payload.id
+      ).picked = true;
+    },
+    ["cart/deleteFromCart"]: (state, action) => {
+      state.items.nexPlants.find(
+        (el) => el.id === action.payload
+      ).picked = false;
+    },
+  },
 });
 
 export function getProductsList() {
@@ -19,7 +32,6 @@ export function getProductsList() {
     fetch("/data/data.json")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         dispatch(addProducts(data));
       });
   };

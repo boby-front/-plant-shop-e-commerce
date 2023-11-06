@@ -9,7 +9,7 @@ const MainNotice = () => {
       <h2></h2>
       <section className="flex  justify-evenly">
         <article className="flex flex-col items-center w-[300px] gap-5 ">
-          <i class="text-slate-400 text-3xl fa-solid fa-quote-left"></i>
+          <i className="text-slate-400 text-3xl fa-solid fa-quote-left"></i>
           <p className="text-center DM font-semibold text-slate-700">
             Sed odio donec curabitur auctor amet tincidunt non odio enim felis
             tincidunt amet morbi egestas hendrerit.
@@ -21,7 +21,7 @@ const MainNotice = () => {
         </article>
 
         <article className="flex flex-col items-center w-[300px] gap-5 ">
-          <i class="text-slate-400 text-3xl fa-solid fa-quote-left"></i>
+          <i className="text-slate-400 text-3xl fa-solid fa-quote-left"></i>
           <p className="text-center DM font-semibold text-slate-700">
             Sed odio donec curabitur auctor amet tincidunt non odio enim felis
             tincidunt amet morbi egestas hendrerit.
@@ -33,7 +33,7 @@ const MainNotice = () => {
         </article>
 
         <article className="flex flex-col items-center w-[300px] gap-5 ">
-          <i class="text-slate-400 text-3xl fa-solid fa-quote-left"></i>
+          <i className="text-slate-400 text-3xl fa-solid fa-quote-left"></i>
           <p className="text-center DM font-semibold text-slate-700">
             Sed odio donec curabitur auctor amet tincidunt non odio enim felis
             tincidunt amet morbi egestas hendrerit.

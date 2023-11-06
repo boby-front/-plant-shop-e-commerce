@@ -27,10 +27,13 @@ const MainNewPlants = () => {
         {products.items &&
           products.items.newPlants.map((item) => (
             <Card
+              key={item.id}
               title={item.title}
               description={item.description}
               price={item.price}
               imgUrl={item.image}
+              itemId={item.id}
+              picked={item.picked}
             />
           ))}
       </article>

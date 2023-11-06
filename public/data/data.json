@@ -5,42 +5,48 @@
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "$84.90",
-      "image": "src/assets/images/newplant1.jpg"
+      "image": "src/assets/images/newplant1.jpg",
+      "picked": false
     },
     {
       "id": 2,
       "title": "Hoya Obovatum",
       "description": "Indoor Plants",
       "price": "$64.00",
-      "image": "src/assets/images/newplant2.jpg"
+      "image": "src/assets/images/newplant2.jpg",
+      "picked": false
     },
     {
       "id": 3,
       "title": "Monstera Deliciosa",
       "description": "Air purifying",
       "price": "$224.90",
-      "image": "src/assets/images/newplant3.jpg"
+      "image": "src/assets/images/newplant3.jpg",
+      "picked": false
     },
     {
       "id": 4,
       "title": "Zz Plants",
       "description": "Herbs seeds",
       "price": "$124.90",
-      "image": "src/assets/images/newplant4.jpg"
+      "image": "src/assets/images/newplant4.jpg",
+      "picked": false
     },
     {
       "id": 5,
       "title": "Bird of Paradise",
       "description": "Ceramic pots",
       "price": "$249.90",
-      "image": "src/assets/images/newplant5.jpg"
+      "image": "src/assets/images/newplant5.jpg",
+      "picked": false
     },
     {
       "id": 6,
       "title": "Calathea Beauty Star",
       "description": "Herbs seed",
       "price": "$79.90",
-      "image": "src/assets/images/newplant6.jpg"
+      "image": "src/assets/images/newplant6.jpg",
+      "picked": false
     }
   ],
 
@@ -50,84 +56,96 @@
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     },
     {
       "id": 1,
       "title": "Birdnest Japanese",
       "description": "Air purifying",
       "price": "",
-      "image": ""
+      "image": "",
+      "picked": false
     }
   ]
 }
