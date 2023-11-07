@@ -43,7 +43,7 @@ const Card = ({ title, price, description, imgUrl, itemId, picked }) => {
           <i className="fa-regular fa-star"></i>
         </div>
         <p className="mb-2 text-slate-500">{description}</p>
-        <p className="font-semibold text-lg text-slate-500">{price}</p>
+        <p className="font-semibold text-sm text-slate-500 DM">{price}$</p>
 
         {picked ? (
           <p className="DM bg-green-300 w-[150px] text-center text-xl p-3 absolute bottom-[20px] right-[20px] anim-addedIttem">
