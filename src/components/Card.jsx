@@ -24,7 +24,7 @@ const Card = ({ title, price, description, imgUrl, itemId, picked }) => {
         <i className=" text-xl text-slate-200 fa-solid fa-magnifying-glass hover:text-slate-400 duration-700"></i>
       </div>
 
-      <img src={imgUrl} alt={title} className="h-[450px] m-auto" />
+      <img src={imgUrl} alt={title} className="h-[400px] m-auto" />
       {viewModal && (
         <ModalCard
           imgUrl={imgUrl}

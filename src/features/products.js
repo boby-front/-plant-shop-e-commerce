@@ -20,9 +20,12 @@ export const products = createSlice({
       ).picked = true;
     },
     ["cart/deleteFromCart"]: (state, action) => {
-      state.items.nexPlants.find(
+      state.items.newPlants.find(
         (el) => el.id === action.payload
       ).picked = false;
+    },
+    ["cart/resetCart"]: (state, action) => {
+      state.items.newPlants.forEach((item) => (item.picked = false));
     },
   },
 });

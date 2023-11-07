@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cartItems: [],
+  buyMessage: false,
 };
 
 export const cart = createSlice({
@@ -20,6 +21,13 @@ export const cart = createSlice({
         (item) => item.id === action.payload
       );
       state.cartItems.splice(indexOfItemToRemove, 1);
+    },
+    resetCart: (state) => {
+      state.cartItems = [];
+      state.buyMessage = true;
+    },
+    resetBuyMessage: (state) => {
+      state.buyMessage = false;
     },
   },
 });
@@ -46,6 +54,12 @@ export function addOnetoCart(action) {
   };
 }
 
-export const { createCartItem, updateItemFromSelect, deleteFromCart } =
-  cart.actions;
+export const {
+  createCartItem,
+  updateItemFromSelect,
+  deleteFromCart,
+  resetCart,
+  resetBuyMessage,
+} = cart.actions;
+
 export default cart.reducer;
