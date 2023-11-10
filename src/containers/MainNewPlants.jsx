@@ -15,7 +15,7 @@ const MainNewPlants = () => {
   }, [dispatch, products.items]);
 
   return (
-    <main className="text-slate-800 py-[100px]">
+    <section className="text-slate-800 py-[100px]">
       <div className="flex justify-between w-[65%] m-auto mb-[60px]">
         <h1 className="text-4xl">New plants</h1>
         <ButtonShop bgButton={"bg-green-600"} textColor={"text-slate-100"} />
@@ -34,10 +34,11 @@ const MainNewPlants = () => {
               imgUrl={item.image}
               itemId={item.id}
               picked={item.picked}
+              newItem={item.new}
             />
           ))}
       </article>
-    </main>
+    </section>
   );
 };
 

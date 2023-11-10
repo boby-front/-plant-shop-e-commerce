@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
+import { Link } from "react-router-dom";
 import Cart from "./Cart";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { isLogoutAction } from "../features/auth";
 
 const Nav = () => {
   const [showModal, setShowModal] = useState(false);
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+  const auth = useSelector((state) => state.auth);
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -13,36 +17,58 @@ const Nav = () => {
 
   return (
     <>
-      <header className="flex text-slate-100 justify-between items-center absolute z-10 w-full px-5">
+      <header className="flex text-slate-100 justify-between items-center absolute z-10 w-full px-5 py-3">
         <h1 className="block  text-4xl text-green-500">Greenstore</h1>
-        <div className="flex gap-5 items-end relative ">
+        <div className="flex  items-center relative ">
           <ul className="flex gap-10">
-            <li className="DM px-2 hover:text-green-500 hover:duration-600">
-              Home
-            </li>
-            <li className="DM px-2 hover:text-green-500 hover:duration-600">
-              Plants
-            </li>
+            <Link to="/home">
+              <li className="DM px-2 hover:text-green-500 hover:duration-600">
+                Home
+              </li>
+            </Link>
+
+            <Link to="/shop" className="">
+              <li className="DM px-2 hover:text-green-500 hover:duration-600">
+                Plants & Utils
+              </li>
+            </Link>
+
             <li className="DM px-2 hover:text-green-500 hover:duration-600">
               About
             </li>
             <li className="DM px-2 hover:text-green-500 hover:duration-600">
               Contact
             </li>
+            <span className="cursor-pointer mx-2 DM font-semibold  flex items-center hover:text-green-500 hover:duration-600">
+              {cart.cartItems
+                .reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
+                .toFixed(2)}
+              $
+              <i
+                className=" ml-1 text-2xl fa-solid fa-cart-shopping  "
+                onClick={toggleModal}
+              ></i>
+            </span>
           </ul>
-          <span className="cursor-pointer mx-2 DM font-semibold  flex items-end hover:text-green-500 hover:duration-600">
-            {cart.cartItems
-              .reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
-              .toFixed(2)}
-            $
-            <i
-              className=" ml-1 text-2xl fa-solid fa-cart-shopping  "
-              onClick={toggleModal}
-            ></i>
-          </span>
-          <i className=" ml-2 text-2xl fa-solid fa-user cursor-pointer hover:text-green-500 hover:duration-600"></i>
+
+          <div className="rounded-[50%] w-[70px] h-[70px]  border-2 border-green-600 relative cursor-pointer  overflow-hidden  ml-5">
+            <img
+              src={auth.imageUser}
+              alt="image Avatar"
+              className="  hover:scale-[1.1]  duration-300  objectif-cover translate-y-[5px]"
+            />
+          </div>
           {showModal &&
             createPortal(<Cart closeCart={toggleModal} />, document.body)}
+          <div
+            className="ml-1 relative group"
+            onClick={() => dispatch(isLogoutAction())}
+          >
+            <i className="fa-solid fa-right-from-bracket cursor-pointer text-green-600 hover:text-green-400"></i>
+            <p className="DM bg-slate-200 text-slate-800 rounded p-1 z-100 absolute left-[-60px] hidden group-hover:block">
+              Logout
+            </p>
+          </div>
         </div>
       </header>
       {cart.cartItems.length > 0 && (

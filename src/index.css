@@ -35,7 +35,13 @@
     background-image: url("./assets//images/salon-plants.jpg");
   }
 
-  nav ul li::after {
+  header ul a,
+  header ul li {
+    display: flex;
+    align-items: center;
+  }
+
+  header ul li::after {
     position: absolute;
     bottom: -10px;
     left: 0;
@@ -46,7 +52,7 @@
     transition: width 0.4s ease;
   }
 
-  nav ul li:hover::after {
+  header ul li:hover::after {
     width: 100%;
   }
 
@@ -66,6 +72,10 @@
     }
   }
 
+  .hovered-div {
+    right: 20px !important;
+  }
+
   /** cart **/
 
   .anim-cart {
@@ -78,6 +88,23 @@
     }
     100% {
       transform: translateX(0%);
+    }
+  }
+
+  /** userLogin **/
+
+  .anim-user {
+    animation: anim-user 0.8s ease;
+  }
+
+  @keyframes anim-user {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(100%);
+      display: none;
     }
   }
 }
