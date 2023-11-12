@@ -3,7 +3,7 @@ import React from "react";
 const ModalCard = ({ imgUrl, titleAlt, toggleModal, handleModalClick }) => {
   return (
     <div
-      className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-80 flex items-center justify-center z-50"
+      className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-80 flex items-center justify-center z-50 "
       onClick={toggleModal}
     >
       <div className="w-[30%] relative" onClick={handleModalClick}>

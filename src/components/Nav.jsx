@@ -7,6 +7,7 @@ import { isLogoutAction } from "../features/auth";
 
 const Nav = () => {
   const [showModal, setShowModal] = useState(false);
+  const [changeColorFont, setChangeColorFont] = useState(true);
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   const auth = useSelector((state) => state.auth);
@@ -17,17 +18,28 @@ const Nav = () => {
 
   return (
     <>
-      <header className="flex text-slate-100 justify-between items-center absolute z-10 w-full px-5 py-3">
+      <header
+        className={`flex text-slate-100 justify-between items-center absolute z-10 w-full px-5 py-3 font-semibold ${
+          changeColorFont ? "text-slate-100" : "text-slate-600"
+        }`}
+      >
         <h1 className="block  text-4xl text-green-500">Greenstore</h1>
         <div className="flex  items-center relative ">
           <ul className="flex gap-10">
-            <Link to="/home">
-              <li className="DM px-2 hover:text-green-500 hover:duration-600">
+            <Link to="/home" onClick={() => setChangeColorFont(true)}>
+              <li
+                className="DM px-2 hover:text-green-500 hover:duration-600 
+                "
+              >
                 Home
               </li>
             </Link>
 
-            <Link to="/shop" className="">
+            <Link
+              to="/shop"
+              className=""
+              onClick={() => setChangeColorFont(false)}
+            >
               <li className="DM px-2 hover:text-green-500 hover:duration-600">
                 Plants & Utils
               </li>

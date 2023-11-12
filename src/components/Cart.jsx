@@ -12,7 +12,7 @@ const Cart = ({ closeCart }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="fixed anim-cart right-[60px] top-[100px] bg-slate-100  duration-500 rounded-lg min-w-[450px] border border-slate-300 overflow-hidden pt-5 shadow-lg">
+    <div className="fixed anim-cart right-[60px] top-[100px] bg-slate-100  duration-500 rounded-lg min-w-[450px] border border-slate-300  pt-5 shadow-lg max-h-[80%] overflow-y-scroll">
       <span
         onClick={closeCart}
         className="font-semibold absolute top-[2px] right-[8px] cursor-pointer active:scale-[1.3] DM"

@@ -7,19 +7,23 @@ const MainShop = () => {
   const products = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const [datafiltered, setDatafiltered] = useState();
+  const [selectedCategory, setSelectedCategory] = useState("Tous");
+
   let categories = [];
 
   if (products.items) {
     categories = [
-      ...new Set(products.items.shopPlants.map((item) => item.category)),
+      ...new Set(products.items.newPlants.map((item) => item.category)),
     ];
   }
 
   const handleDataFiltered = (category) => {
+    setSelectedCategory(category);
+
     if (category === "Tous") {
-      setDatafiltered(products.items.shopPlants);
+      setDatafiltered(products.items.newPlants);
     } else {
-      const filteredData = products.items.shopPlants.filter(
+      const filteredData = products.items.newPlants.filter(
         (item) => item.category === category
       );
       setDatafiltered(filteredData);
@@ -29,6 +33,8 @@ const MainShop = () => {
   useEffect(() => {
     if (!products.items) {
       dispatch(getProductsList());
+    } else {
+      handleDataFiltered("Tous"); //
     }
   }, [dispatch, products.items]);
 
@@ -43,11 +49,16 @@ const MainShop = () => {
       >
         <div className="mb-[10px]">
           <button
-            className=" bg-slate-300 text-slate-600 px-3 py-2 rounded DM mr-5 hover:scale-110 duration-300"
+            className={` px-3 py-2 rounded DM mr-5 hover:scale-110 duration-300 font-semibold ${
+              selectedCategory === "Tous"
+                ? "text-slate-100 bg-green-600"
+                : "bg-slate-200 text-slate-500"
+            }`}
             onClick={() => handleDataFiltered("Tous")}
           >
             Tous
           </button>
+
           {categories.map((category, index) => {
             if (category !== undefined) {
               const capitalizedCategory =
@@ -55,7 +66,11 @@ const MainShop = () => {
               return (
                 <button
                   key={index}
-                  className="bg-slate-300 text-slate-600 px-3 py-2 rounded DM mr-5 hover:scale-110 duration-300"
+                  className={`  px-3 py-2 rounded DM mr-5 hover:scale-110 duration-300 font-semibold ${
+                    selectedCategory === category
+                      ? "bg-green-600 text-slate-100"
+                      : "bg-slate-200 text-slate-500"
+                  }`}
                   onClick={() => handleDataFiltered(category)}
                 >
                   {capitalizedCategory}
@@ -65,9 +80,10 @@ const MainShop = () => {
             return null;
           })}
         </div>
+
         <div className="w-[100%] m-auto flex flex-wrap justify-base gap-[30px]">
           {datafiltered &&
-            datafiltered.map((item, index) => (
+            datafiltered.map((item) => (
               <Card
                 key={item.id}
                 title={item.title}

@@ -7,7 +7,8 @@
       "price": 84.9,
       "image": "src/assets/images/newplant1.jpg",
       "picked": false,
-      "new": "New"
+      "new": "New",
+      "category": "plants"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "price": 64.0,
       "image": "src/assets/images/newplant2.jpg",
       "picked": false,
-      "new": "New"
+      "new": "New",
+      "category": "plants"
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "price": 224.9,
       "image": "src/assets/images/newplant3.jpg",
       "picked": false,
-      "new": "New"
+      "new": "New",
+      "category": "plants"
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "price": 124.9,
       "image": "src/assets/images/newplant4.jpg",
       "picked": false,
-      "new": "New"
+      "new": "New",
+      "category": "plants"
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "price": 249.9,
       "image": "src/assets/images/newplant5.jpg",
       "picked": false,
-      "new": "New"
+      "new": "New",
+      "category": "plants"
     },
     {
       "id": 6,
@@ -52,64 +57,8 @@
       "price": 79.9,
       "image": "src/assets/images/newplant6.jpg",
       "picked": false,
-      "new": "New"
-    }
-  ],
-
-  "shopPlants": [
-    {
-      "id": 1,
-      "title": "Birdnest Japanese",
-      "description": "Air purifying",
-      "price": 84.9,
-      "image": "src/assets/images/newplant1.jpg",
-      "picked": false,
-      "new": "New"
-    },
-    {
-      "id": 2,
-      "title": "Hoya Obovatum",
-      "description": "Indoor Plants",
-      "price": 64.0,
-      "image": "src/assets/images/newplant2.jpg",
-      "picked": false,
-      "new": "New"
-    },
-    {
-      "id": 3,
-      "title": "Monstera Deliciosa",
-      "description": "Air purifying",
-      "price": 224.9,
-      "image": "src/assets/images/newplant3.jpg",
-      "picked": false,
-      "new": "New"
-    },
-    {
-      "id": 4,
-      "title": "Zz Plants",
-      "description": "Herbs seeds",
-      "price": 124.9,
-      "image": "src/assets/images/newplant4.jpg",
-      "picked": false,
-      "new": "New"
-    },
-    {
-      "id": 5,
-      "title": "Bird of Paradise",
-      "description": "Ceramic pots",
-      "price": 249.9,
-      "image": "src/assets/images/newplant5.jpg",
-      "picked": false,
-      "new": "New"
-    },
-    {
-      "id": 6,
-      "title": "Calathea Beauty Star",
-      "description": "Herbs seed",
-      "price": 79.9,
-      "image": "src/assets/images/newplant6.jpg",
-      "picked": false,
-      "new": "New"
+      "new": "New",
+      "category": "plants"
     },
     {
       "id": 7,
