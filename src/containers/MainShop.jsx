@@ -40,11 +40,11 @@ const MainShop = () => {
 
   return (
     <main className="text-slate-800 py-[100px]">
-      <div className="flex justify-between w-[65%] m-auto mb-[60px]">
+      <div className="flex justify-between max-w-[70%] m-auto mb-[60px]">
         <h1 className="text-4xl">Shop</h1>
       </div>
       <article
-        className="w-[65%] m-auto flex flex-wrap justify-between gap-[30px]
+        className="w-[70%] m-auto flex flex-wrap justify-between 
       "
       >
         <div className="mb-[10px]">
@@ -81,7 +81,7 @@ const MainShop = () => {
           })}
         </div>
 
-        <div className="w-[100%] m-auto flex flex-wrap justify-base gap-[30px]">
+        <div className="w-[100%] m-auto flex flex-wrap justify-base justify-between gap-[30px]">
           {datafiltered &&
             datafiltered.map((item) => (
               <Card

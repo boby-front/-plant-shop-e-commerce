@@ -28,7 +28,7 @@ const Card = ({
   return (
     <>
       <div
-        className="w-[350px] rounded-lg overflow-hidden bg-grayCard relative hover:translate-y-[-5px] hover:shadow-lg duration-300"
+        className=" w-[30%] rounded-lg overflow-hidden bg-grayCard relative hover:translate-y-[-5px] hover:shadow-lg duration-300"
         onMouseEnter={() => setHoveredGlass(true)}
         onMouseLeave={() => setHoveredGlass(false)}
       >
@@ -41,13 +41,13 @@ const Card = ({
           }`}
           onClick={handleModal}
         >
-          <i className=" text-xl text-slate-200 fa-solid fa-magnifying-glass hover:text-slate-400 duration-700 "></i>
+          <i className=" text-xl text-slate-200 fa-solid fa-magnifying-glass hover:text-slate-400 duration-500 "></i>
         </div>
 
         <img
           src={imgUrl}
           alt={title}
-          className="h-[400px] m-auto hover-trigger"
+          className="h-[400px] m-auto hover-trigger object-cover"
         />
 
         <div className="w-[100%] relative p-[15px] ">

@@ -16,6 +16,10 @@ const Nav = () => {
     setShowModal(!showModal);
   };
 
+  const handleChangeColor = () => {
+    setChangeColorFont(true);
+  };
+
   return (
     <>
       <header
@@ -23,10 +27,15 @@ const Nav = () => {
           changeColorFont ? "text-slate-100" : "text-slate-600"
         }`}
       >
-        <h1 className="block  text-4xl text-green-500">Greenstore</h1>
+        <Link to="/home" onClick={handleChangeColor}>
+          <h1 className="block  text-4xl text-green-500 cursor-pointer">
+            Greenstore
+          </h1>
+        </Link>
+
         <div className="flex  items-center relative ">
           <ul className="flex gap-10">
-            <Link to="/home" onClick={() => setChangeColorFont(true)}>
+            <Link to="/home" onClick={handleChangeColor}>
               <li
                 className="DM px-2 hover:text-green-500 hover:duration-600 
                 "
@@ -51,19 +60,18 @@ const Nav = () => {
             <li className="DM px-2 hover:text-green-500 hover:duration-600">
               Contact
             </li>
-            <span className="cursor-pointer mx-2 DM font-semibold  flex items-center hover:text-green-500 hover:duration-600">
+            <span className=" mx-2 DM font-semibold  flex items-center ">
               {cart.cartItems
                 .reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
                 .toFixed(2)}
               $
-              <i
-                className=" ml-1 text-2xl fa-solid fa-cart-shopping  "
-                onClick={toggleModal}
-              ></i>
             </span>
           </ul>
 
-          <div className="rounded-[50%] w-[70px] h-[70px]  border-2 border-green-600 relative cursor-pointer  overflow-hidden  ml-5">
+          <div
+            className="rounded-[50%] w-[70px] h-[70px]  border-2 border-green-600 relative cursor-pointer  overflow-hidden  "
+            onClick={toggleModal}
+          >
             <img
               src={auth.imageUser}
               alt="image Avatar"

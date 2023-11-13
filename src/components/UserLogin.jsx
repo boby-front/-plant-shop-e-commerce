@@ -27,9 +27,9 @@ const UserLogin = () => {
   };
 
   return (
-    <div className="fixed top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 z-40 bg-slate-800 h-full w-full flex items-center justify-center overflow-hidden">
-      <div className=" text-center bg-slate-100 px-10 py-5 rounded-xl overflow-hidden w-[700px] z-40">
-        <h2 className="py-5 text-4xl text-green-600">
+    <div className="fixed top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 z-40 sm:bg-slate-800 bg-slate-100 h-full w-full flex items-center justify-center overflow-hidden">
+      <div className=" text-center bg-slate-100 px-10 py-5 rounded-xl overflow-hidden z-40 md:w-auto w-[100%]">
+        <h2 className="py-5 md:text-4xl text-5xl text-green-600">
           Welcome to Greenstore !
         </h2>
         <form onSubmit={handleSubmit}>
@@ -60,7 +60,7 @@ const UserLogin = () => {
                   </span>
                 )}
                 <div
-                  className={` rounded-[50%] w-[120px] h-[120px] bg-slate-100 overflow-hidden border-2 border-green-600 relative cursor-pointer opacity-40 hover:opacity-100 duration-500 mb-10 hover:scale-[1.1] ${
+                  className={` rounded-[50%] sm:w-[120px] sm:h-[120px] w-[75px] h-[75px] bg-slate-100 overflow-hidden border-2 border-green-600 relative cursor-pointer opacity-40 hover:opacity-100 duration-500 mb-10 hover:scale-[1.1] ${
                     imageValue === avatar ? "scale-[1.1] opacity-[100%] " : ""
                   }
                   `}
